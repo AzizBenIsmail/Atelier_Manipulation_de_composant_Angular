@@ -1,0 +1,13 @@
+
+<div *ngFor="let user of users" >
+  {{user.idCustomer}}
+  {{user.firstName}}
+  {{user.lastName}}
+  {{user.birthDate}}
+  {{user.email}}
+  {{user.password}}
+  {{user.profession}}
+  {{user.accountCategory}}
+  <img src="{{user.picture}}">
+  <input type="button" value="delete user" (click)="deleteUser(user)">
+</div>

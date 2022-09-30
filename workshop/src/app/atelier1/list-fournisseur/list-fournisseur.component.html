@@ -1,0 +1,40 @@
+<p>list-fournisseur works!</p>
+<!--
+<div *ngFor="let f of list ">
+    {{f.idFournisseur}}
+    {{f.code}}
+    {{f.libelle}}
+ 
+</div>
+<hr>
+ question5 : les fournisseurs dont le idFournisseur est
+inférieur ou égale à 100. 
+ 
+<div *ngFor="let f of list ">
+    <div *ngIf="f.idFournisseur < 100">
+        {{f.idFournisseur}}
+        {{f.code}}
+        {{f.libelle}}
+    </div>
+
+    <div [ngStyle]="{'font-weight':f.code.startsWith('2A')? 'bold':'italic'}">
+
+        {{f.idFournisseur}}
+        {{f.code}}
+        {{f.libelle}}
+    </div>
+
+-->
+
+<div *ngFor="let f of list ">
+    <hr>
+    methode 2
+    <div [ngStyle]="{'font-weight':getColor(f.code)}">
+
+        {{f.idFournisseur}}
+        {{f.code}}
+        {{f.libelle}}
+        <input type="submit" value="delete" (click)="deleteFournisseur(f)">
+    </div>
+</div>
+
