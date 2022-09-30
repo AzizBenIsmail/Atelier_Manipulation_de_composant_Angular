@@ -1,0 +1,26 @@
+<p>test1 works!</p>
+<div *ngFor="let p of products">
+    <!--Meth 1-->
+<div *ngIf="p.libelle=='hp'">
+    <div [style.backgroundColor]="'red'">
+        {{p.idProduit}}
+        {{p.libelle}}
+    </div>
+</div> <br>
+
+<div *ngIf="p.libelle!='hp'">
+    <div [style.backgroundColor]="'green'">
+        {{p.idProduit}}
+        {{p.libelle}}
+    </div>
+</div> <br>
+
+<!--Meth 2-->
+<div [ngStyle]="{'backgroundColor':p.libelle=='hp'?'red':'green'}">
+    {{p.idProduit}}
+    {{p.libelle}}
+</div>
+
+</div>
+
+<input type="submit" [ngClass]="changeClass()" value="send">

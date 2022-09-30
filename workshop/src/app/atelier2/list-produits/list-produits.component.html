@@ -1,0 +1,28 @@
+<p>list-produits works!</p>
+
+<div *ngFor="let p of listProduits; let j = index">
+    Produit : 
+    <div>
+        <input type="submit" value="Detail" (click)="showDetail(j)">
+    </div>
+    <div *ngIf="index == j">
+        {{msg.idProduit}}
+        {{msg.code}}
+        {{msg.libelle}}
+        {{msg.prixUnitaire}}
+        {{msg.tauxTVA}}
+
+    </div>
+   
+    <div >
+        <input type="submit" value="Ajuster TVA"  >
+    </div>
+     <br>
+    {{p.idProduit}}
+    {{p.code}}
+    {{p.libelle}}
+    {{p.prixUnitaire}}
+    {{p.tauxTVA}}
+    <hr>
+
+</div>
