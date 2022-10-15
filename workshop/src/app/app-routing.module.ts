@@ -27,6 +27,7 @@ const routes: Routes = [
       { path: 'add', component: AddproductComponent },
     ],
   },
+  { path: 'Admin', loadChildren:()=>import('./admin/admin.module').then((m)=>m.AdminModule) },
   { path: '**', component: NotfoundComponent },
 ];
 

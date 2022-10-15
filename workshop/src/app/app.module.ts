@@ -20,6 +20,7 @@ import { MainInvoiceComponentComponent } from './Atelier3/main-invoice-component
 import { InvoiceListComponentComponent } from './Atelier3/invoice-list-component/invoice-list-component.component';
 import { InvoiceComponentComponent } from './Atelier3/invoice-component/invoice-component.component';
 import { HeaderComponent } from './header/header.component';
+import { AdminModule } from './admin/admin.module';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]
