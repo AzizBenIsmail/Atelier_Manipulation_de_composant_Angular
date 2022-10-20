@@ -10,13 +10,19 @@ import { DetailproductComponent } from './Produit/detailproduct/detailproduct.co
 import { RemoveproductComponent } from './Produit/removeproduct/removeproduct.component';
 import { ShowproductComponent } from './Produit/showproduct/showproduct.component';
 import { UpdateproductComponent } from './Produit/updateproduct/updateproduct.component';
+import { Workshop7Component } from './workshop7/workshop7.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent ,data:{title : 'titrespecial'} },
+  { path: 'work', component: Workshop7Component },
   { path: 'invoice', component: InvoiceComponentComponent },
-  { path: 'invoice-list', component: InvoiceListComponentComponent },
-  { path: 'maininvoice', component: MainInvoiceComponentComponent },  
+  { path: 'list/:id/:a/:b', component: InvoiceListComponentComponent },
+  { path: 'maininvoice', component: MainInvoiceComponentComponent }, 
+  { path: 'add', component: AddproductComponent },
+  { path: 'add', component: AddproductComponent },
+
   {
     path: 'Product',
     component: ShowproductComponent,
@@ -28,7 +34,9 @@ const routes: Routes = [
     ],
   },
   { path: 'Admin', loadChildren:()=>import('./admin/admin.module').then((m)=>m.AdminModule) },
+  { path: 'LazyLoading', loadChildren:()=>import('./lazy-loading/lazy-loading.module').then((m)=>m.LazyLoadingModule) },
   { path: '**', component: NotfoundComponent },
+  
 ];
 
 @NgModule({

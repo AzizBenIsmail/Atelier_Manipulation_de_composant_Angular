@@ -1,1 +1,28 @@
 <p>addproduct works!</p>
+<form #f="ngForm">
+  <label>id</label>
+  <input type="text" name="id" ngModel required minlength="2" #id="ngModel" />
+  <div *ngIf="id.invalid && id.touched">
+    <div *ngIf="id.errors?.['minlength']">
+        minlength
+        </div>
+<div *ngIf="id.errors?.['required']"> 
+required
+</div>
+    </div>
+  <label>nom</label>
+  <input type="text" name="nom" ngModel required />
+  <label>Description</label>
+  <input type="text" name="Description" ngModel required />
+  <!--<div #ngif="" f.invalid>
+    <input type="submit" value="save" (click)="ShowData(f)" disabled/>
+  </div>-->
+  <input type="submit" value="save" (click)="ShowData(f)" [disabled]="!f.valid"/>
+</form>
+
+<div *ngFor="let p of tab ;let i=index">
+    {{p.id}}
+    {{p.Description}}
+    {{p.nom}}
+    <input type="submit" value="delete" (click)="remove(p)">
+</div>

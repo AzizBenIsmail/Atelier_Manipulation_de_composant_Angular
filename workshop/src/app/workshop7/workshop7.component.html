@@ -1,0 +1,52 @@
+<p>workshop7 works!</p>
+<form #f="ngForm">
+    <label>FistName</label>
+    <br>
+    <input type="text" name="FistName" ngModel minlength="3" required pattern="[a-zA-Z]*" #Fn="ngModel">
+    <div *ngIf="Fn.invalid">
+        <div *ngIf="Fn.errors?.['pattern']">
+            pattern
+        </div>
+    </div>
+    <br>
+    <label>LastName</label>
+    <br>
+    <input type="text" name="LastName" ngModel minlength="3" required pattern="[a-zA-Z]*" #LN="ngModel">
+    <div *ngIf="LN.invalid">
+        <div *ngIf="Fn.errors?.['pattern']">
+            pattern
+        </div>
+    </div>
+    <br>
+    <label>Birthday</label>
+    <br>
+    <input type="date" name="Birthday" ngModel>
+    <br>
+    <label>Email</label>
+    <br>
+    <input type="email" name="Email" ngModel pattern="^[a-zA-Z0-9._-]+@gmail.com" #Em="ngModel">
+    <div *ngIf="Em.invalid">
+        <div *ngIf="Fn.errors?.['pattern']">
+            votre mail est inc
+        </div>
+    </div>
+    <br>
+    <label>Password</label>
+    <br>
+    <input type="pwd" name="Password" ngModel  pattern="^[a-zA-Z0-9]{8,}" #PW="ngModel">
+    <div *ngIf="PW.invalid">
+        <div *ngIf="Fn.errors?.['pattern']">
+            votre Password est inc
+        </div>
+    </div>
+    <br>
+    <label>Profession</label>
+    <br>
+    <input type="text" name="Profession" ngModel>
+    <br>
+    <label>Customer Category</label>
+    <br>
+    <input type="text" name="Category" [(ngModel)]="p.Category" value="Customer">
+    <br>
+    <input type="reset" value="save" [disabled]="!f.valid">
+</form>
