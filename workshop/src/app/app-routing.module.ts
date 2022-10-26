@@ -10,13 +10,16 @@ import { DetailproductComponent } from './Produit/detailproduct/detailproduct.co
 import { RemoveproductComponent } from './Produit/removeproduct/removeproduct.component';
 import { ShowproductComponent } from './Produit/showproduct/showproduct.component';
 import { UpdateproductComponent } from './Produit/updateproduct/updateproduct.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { Workshop7Component } from './workshop7/workshop7.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+ // { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'Reactive', pathMatch: 'full' },
   { path: 'login', component: LoginComponent ,data:{title : 'titrespecial'} },
   { path: 'work', component: Workshop7Component },
+  { path: 'Reactive', component: ReactiveformComponent },
   { path: 'invoice', component: InvoiceComponentComponent },
   { path: 'list/:id/:a/:b', component: InvoiceListComponentComponent },
   { path: 'maininvoice', component: MainInvoiceComponentComponent }, 

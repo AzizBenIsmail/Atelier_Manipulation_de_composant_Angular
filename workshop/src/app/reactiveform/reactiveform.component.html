@@ -1,0 +1,34 @@
+<p>reactiveform works!</p>
+<input type="text" [formControl]="name" />
+<input type="text" [formControl]="surname" />
+<input type="submit" (click)="showFC()" />
+-------------------------------------
+<h1>form groupe</h1>
+<form [formGroup]="fg">
+  <label>name</label>
+  <input type="text" formControlnamefg="namefg" />
+  <div *ngIf="namefg?.invalid">
+    <div *ngIf="namefg?.errors?.['required']">required</div>
+    <div *ngIf="namefg?.errors?.['minlenght']">minlenght</div>
+  </div>
+  <label>surname</label>
+  <input type="text" formControlsurnamefg="surnamefg" />
+  <input type="submit" (click)="showFg()" [disabled]="fg.invalid" />
+</form>
+-------------------------------------
+<form [formGroup]="fbs">
+  <label>name</label>
+  <input type="text" formControlnamefg="namefg" />
+
+  <label>surname</label>
+  <input type="text" formControlsurnamefg="surnamefg" />
+  <div formArrayName="cour">
+    <div *ngFor="let c of cours.controls; let i = index">
+      <input type="text" formControlName={{i}} />
+    <input type="submit" (click)="deletecours(i)" value="delete cour"/>
+    <input type="submit" (click)="addcours()" value="add cour"/>
+  </div>
+</div>
+
+  <input type="submit" (click)="showFbs()" [disabled]="fg.invalid" />
+</form>

@@ -21,9 +21,10 @@ import { InvoiceListComponentComponent } from './Atelier3/invoice-list-component
 import { InvoiceComponentComponent } from './Atelier3/invoice-component/invoice-component.component';
 import { HeaderComponent } from './header/header.component';
 import { AdminModule } from './admin/admin.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Workshop7Component } from './workshop7/workshop7.component';
 import { LazyLoadingModule } from './lazy-loading/lazy-loading.module';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { LazyLoadingModule } from './lazy-loading/lazy-loading.module';
     InvoiceListComponentComponent,
     InvoiceComponentComponent,
     HeaderComponent,
-    Workshop7Component
+    Workshop7Component,
+    ReactiveformComponent
     
     
   ],
@@ -55,7 +57,8 @@ import { LazyLoadingModule } from './lazy-loading/lazy-loading.module';
     AppRoutingModule,
     AdminModule,
     FormsModule,
-    LazyLoadingModule
+    LazyLoadingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
