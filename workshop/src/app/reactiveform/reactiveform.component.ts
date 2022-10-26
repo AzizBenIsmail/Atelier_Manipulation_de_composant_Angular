@@ -21,6 +21,7 @@ export class ReactiveformComponent implements OnInit {
     Surnamefg: new FormControl('aziz FormBuilder'),
     cours:this.fb.array([
       new FormControl('angular'),
+      new FormControl('CSS'),
       new FormControl('react'),
 
     ]),
