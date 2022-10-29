@@ -25,6 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Workshop7Component } from './workshop7/workshop7.component';
 import { LazyLoadingModule } from './lazy-loading/lazy-loading.module';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { TestModule } from './pak/lazy/test/test.module';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     FormsModule,
     LazyLoadingModule,
     ReactiveFormsModule,
+    TestModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
