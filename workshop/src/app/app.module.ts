@@ -26,6 +26,7 @@ import { Workshop7Component } from './workshop7/workshop7.component';
 import { LazyLoadingModule } from './lazy-loading/lazy-loading.module';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { TestModule } from './pak/lazy/test/test.module';
+import { ListUserComponentComponent } from './Services/list-user-component/list-user-component.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { TestModule } from './pak/lazy/test/test.module';
     InvoiceComponentComponent,
     HeaderComponent,
     Workshop7Component,
-    ReactiveformComponent
+    ReactiveformComponent,
+    ListUserComponentComponent
     
     
   ],
